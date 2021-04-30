@@ -1,38 +1,81 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  width: 50%;
+  /* padding: 0 5rem; */
+  /* margin: 0 auto; */
+  margin-top: 1rem;
+  border: 1px solid rgba(50, 20, 10, 0.2);
+  background-color: rgba(50, 20, 10, 0.08);
+}
+.list > div:first-child {
+  width: 40%;
+  padding: 1rem 2rem;
+}
+.list > div:last-child {
+  width: 70%;
+}
+.list > div {
+}
+.list .age {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+}
+.list .message {
+  text-align: left;
+  font-size: 1rem;
+}
+.list .name {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.list .avatar img {
+  width: 5rem;
+  height: 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* ----Form---- */
+.register-wrap {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.register-wrap > * {
+  padding: 0.5rem;
+  width: 30%;
+  background-color: rgba(200, 250, 250, 0.25);
+  margin-top: 1rem;
+}
+.register-wrap textarea {
+  /* width: 30%; */
+  height: 5rem;
+}
+.register-wrap button {
+  width: 10rem;
+  background-color: #fff;
+  /* height: 5rem; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 900px) {
+  .list {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .register-wrap > * {
+    width: 60%;
   }
 }
